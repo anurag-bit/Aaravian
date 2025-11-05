@@ -1,0 +1,21 @@
+Strategy,Job_Story,Faithfulness,Answer_Relevancy,Context_Precision,Context_Recall,Citation_Correctness,Hallucination_Rate,Latency_p50_ms,Latency_p95_ms,Latency_p99_ms,Cost_per_1k_queries,Cost_LLM,Cost_Embeddings,Cost_Rerank,Cost_Tools,Cost_KG,Ingestion_Cost_100_docs,Throughput_QPS
+Classic RAG,JS1: Fact Retrieval,0.89,0.87,0.83,0.81,0.85,0.11,850,1450,1890,18.5,12.4,2.8,3.3,0.0,0.0,8.2,85
+Classic RAG,JS2: Summarization,0.84,0.86,0.79,0.77,0.82,0.16,850,1450,1890,18.5,12.4,2.8,3.3,0.0,0.0,8.2,85
+Classic RAG,JS3: Multi-doc Compare,0.71,0.73,0.68,0.65,0.69,0.29,850,1450,1890,18.5,12.4,2.8,3.3,0.0,0.0,8.2,85
+Classic RAG,JS4: Obligation Mapping,0.68,0.7,0.64,0.61,0.66,0.32,850,1450,1890,18.5,12.4,2.8,3.3,0.0,0.0,8.2,85
+Classic RAG,JS5: Cross-doc Reasoning,0.65,0.67,0.62,0.59,0.63,0.35,850,1450,1890,18.5,12.4,2.8,3.3,0.0,0.0,8.2,85
+Agentic,JS1: Fact Retrieval,0.85,0.88,0.81,0.84,0.83,0.15,3200,5800,7500,45.8,32.5,4.2,0.0,9.1,0.0,12.5,22
+Agentic,JS2: Summarization,0.87,0.89,0.84,0.86,0.85,0.13,3200,5800,7500,45.8,32.5,4.2,0.0,9.1,0.0,12.5,22
+Agentic,JS3: Multi-doc Compare,0.82,0.84,0.79,0.81,0.8,0.18,3200,5800,7500,45.8,32.5,4.2,0.0,9.1,0.0,12.5,22
+Agentic,JS4: Obligation Mapping,0.79,0.81,0.76,0.78,0.77,0.21,3200,5800,7500,45.8,32.5,4.2,0.0,9.1,0.0,12.5,22
+Agentic,JS5: Cross-doc Reasoning,0.77,0.8,0.74,0.76,0.75,0.23,3200,5800,7500,45.8,32.5,4.2,0.0,9.1,0.0,12.5,22
+Agentic RAG,JS1: Fact Retrieval,0.92,0.91,0.88,0.87,0.9,0.08,2100,3800,4900,34.2,22.8,3.5,2.9,5.0,0.0,14.8,38
+Agentic RAG,JS2: Summarization,0.91,0.92,0.87,0.89,0.89,0.09,2100,3800,4900,34.2,22.8,3.5,2.9,5.0,0.0,14.8,38
+Agentic RAG,JS3: Multi-doc Compare,0.88,0.89,0.85,0.86,0.87,0.12,2100,3800,4900,34.2,22.8,3.5,2.9,5.0,0.0,14.8,38
+Agentic RAG,JS4: Obligation Mapping,0.86,0.87,0.83,0.84,0.85,0.14,2100,3800,4900,34.2,22.8,3.5,2.9,5.0,0.0,14.8,38
+Agentic RAG,JS5: Cross-doc Reasoning,0.85,0.86,0.82,0.83,0.84,0.15,2100,3800,4900,34.2,22.8,3.5,2.9,5.0,0.0,14.8,38
+Graph RAG,JS1: Fact Retrieval,0.88,0.86,0.85,0.83,0.87,0.12,1850,3200,4100,28.9,15.6,3.2,2.5,0.0,7.6,42.5,45
+Graph RAG,JS2: Summarization,0.86,0.85,0.82,0.8,0.84,0.14,1850,3200,4100,28.9,15.6,3.2,2.5,0.0,7.6,42.5,45
+Graph RAG,JS3: Multi-doc Compare,0.89,0.88,0.86,0.85,0.88,0.11,1850,3200,4100,28.9,15.6,3.2,2.5,0.0,7.6,42.5,45
+Graph RAG,JS4: Obligation Mapping,0.93,0.92,0.91,0.9,0.92,0.07,1850,3200,4100,28.9,15.6,3.2,2.5,0.0,7.6,42.5,45
+Graph RAG,JS5: Cross-doc Reasoning,0.91,0.9,0.89,0.88,0.9,0.09,1850,3200,4100,28.9,15.6,3.2,2.5,0.0,7.6,42.5,45

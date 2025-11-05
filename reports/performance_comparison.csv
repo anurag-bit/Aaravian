@@ -1,0 +1,5 @@
+Strategy,P50_Latency_ms,P95_Latency_ms,P99_Latency_ms,Max_Throughput_QPS,Cost_per_Query_USD
+Classic RAG,850,1450,1890,85,0.0185
+Agentic,3200,5800,7500,22,0.0458
+Agentic RAG,2100,3800,4900,38,0.0342
+Graph RAG,1850,3200,4100,45,0.0289

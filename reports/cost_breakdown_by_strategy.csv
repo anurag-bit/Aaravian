@@ -1,0 +1,5 @@
+Strategy,LLM_Cost,Embeddings_Cost,Rerank_Cost,Tools_Cost,KG_Cost,Total_Cost_per_1k,Ingestion_Cost_100_docs
+Classic RAG,12.4,2.8,3.3,0.0,0.0,18.5,8.2
+Agentic,32.5,4.2,0.0,9.1,0.0,45.8,12.5
+Agentic RAG,22.8,3.5,2.9,5.0,0.0,34.2,14.8
+Graph RAG,15.6,3.2,2.5,0.0,7.6,28.9,42.5
