@@ -1,0 +1,3 @@
+ {"doc_id":"10K_COMPANYX_2024","title":"Company X Form 10-K 2024","source_type":"SEC_10K","uri":"s3://corp-bucket/sec/COMPANYX_10K_2024.pdf","pages":250,"ingested_at":"2025-11-05T00:00:00Z"}
+ {"doc_id":"OCC_2013-29","title":"OCC Bulletin 2013-29 Third-Party Relationships","source_type":"OCC_BULLETIN","uri":"s3://corp-bucket/occ/2013-29.pdf","pages":20,"ingested_at":"2025-11-05T00:00:00Z"}
+

@@ -1,0 +1,101 @@
+ # Benchmark configuration
+ seed: 42
+ output_dir: ./
+ artifacts:
+   results_parquet: results/results.parquet
+   report_csv: results/report-ready.csv
+   plots_dir: plots
+   traces_dir: traces
+
+ dataset:
+   golden_path: data/golden_dataset.jsonl
+   docs_metadata: data/docs_metadata.jsonl
+
+ models:
+   llm:
+     provider: openai
+     model: gpt-4.1
+     temperature: 0.0
+     max_tokens: 1500
+   judge:
+     provider: openai
+     model: gpt-4.1-mini
+     temperature: 0.0
+    rubric_prompt_path: configs/judge_rubric.md
+    max_retries: 2
+   embeddings:
+     provider: openai
+     model: text-embedding-3-large
+   reranker:
+     provider: cohere
+     model: rerank-3
+
+ pricing_usd:
+   snapshot_date: 2025-11-05
+   openai:
+     gpt-4.1:
+       input_per_million: 5.00
+       output_per_million: 15.00
+     gpt-4.1-mini:
+       input_per_million: 0.30
+       output_per_million: 1.20
+     text-embedding-3-large:
+       input_per_million: 0.13
+   cohere:
+     rerank-3:
+       per_1k_passages: 0.10
+
+ retrieval:
+   chunking:
+     strategy: hierarchical
+     chunk_tokens: 1000
+     overlap_tokens: 120
+   hybrid: true
+   bm25_k: 200
+   dense_top_k: 12
+   rerank_top_k: 5
+   mmr_lambda: 0.5
+
+vector_store:
+  provider: qdrant
+  host: 127.0.0.1
+  port: 6333
+  collection: finance_benchmark
+  recreate: false
+
+hybrid:
+  enable_bm25: true
+  bm25_top_k: 50
+
+tables:
+  numeric_chunk_boost: 1.25
+  number_regex: "(?:\\$?\\b\\d{1,3}(?:,\\d{3})*(?:\\.\\d+)?\\b|\\b\\d+\\.\\d+\\b)"
+
+neo4j:
+  uri: bolt://localhost:7687
+  user: neo4j
+  password_env: NEO4J_PASSWORD
+  database: neo4j
+  enforce_constraints: true
+
+ agent:
+   max_steps: 6
+   tool_timeout_ms: 5000
+   enable_reflection: false
+
+ graph:
+   neo4j:
+     uri: bolt://localhost:7687
+     user: neo4j
+     password_env: NEO4J_PASSWORD
+   extraction:
+     entity_conf_threshold: 0.6
+     max_traversal_depth: 2
+
+ controls:
+   timeouts_ms:
+     retrieval: 4000
+     llm: 20000
+     graph: 6000
+   repeat_runs: 1
+
